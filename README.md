@@ -195,12 +195,6 @@ TfELM-RVFL/
 | `C` | Regularization (supervised) | 0.001-10 |
 | `lam` | Regularization (unsupervised) | 0.001-10 |
 
-## References
-
-- Huang, G. B., et al. "Extreme learning machine: Theory and applications." Neurocomputing (2006)
-- Pao, Y. H., et al. "Functional-link net computing." Computer (1992)
-- Zhang, L., & Suganthan, P. N. "A comprehensive evaluation of random vector functional link networks." Information Sciences (2016)
-
 ## License
 
 MIT License
