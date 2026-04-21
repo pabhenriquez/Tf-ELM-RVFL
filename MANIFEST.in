@@ -1,0 +1,25 @@
+include README.md
+include LICENSE
+include pyproject.toml
+include requirements.txt
+
+recursive-include Layers *.py
+recursive-include Models *.py
+recursive-include Optimizers *.py
+recursive-include Resources *.py
+
+prune Data
+prune Examples
+prune Saved_Models
+prune large dataset
+prune paper
+prune benchmark_*
+prune plot_*
+prune .venv
+prune .git
+prune .github
+prune tfelm_rvfl.egg-info
+
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude .DS_Store

@@ -16,8 +16,24 @@ TfELM-RVFL extends the original TfELM framework by adding RVFL counterparts for 
 
 ## Installation
 
+Install from [PyPI](https://pypi.org/project/tfelm-rvfl/):
+
 ```bash
-pip install -r requirements.txt
+pip install tfelm-rvfl
+```
+
+Or install the latest development version from GitHub:
+
+```bash
+pip install git+https://github.com/pabhenriquez/Tf-ELM-RVFL.git
+```
+
+Or clone the repository and install in editable mode:
+
+```bash
+git clone https://github.com/pabhenriquez/Tf-ELM-RVFL.git
+cd Tf-ELM-RVFL
+pip install -e .
 ```
 
 ## Quick Start

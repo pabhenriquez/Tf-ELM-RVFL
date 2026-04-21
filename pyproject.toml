@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tfelm-rvfl"
+version = "1.1.0"
+description = "TensorFlow-based framework implementing Extreme Learning Machines (ELM) and Random Vector Functional Link (RVFL) networks with all their variants."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Pablo Henriquez"}
+]
+keywords = ["elm", "rvfl", "extreme learning machine", "random vector functional link", "tensorflow", "machine learning"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "tensorflow>=2.10.0",
+    "numpy>=1.21.0",
+    "pandas>=1.3.0",
+    "scikit-learn>=1.0.0",
+    "keras>=2.10.0",
+    "h5py>=3.7.0",
+    "mealpy>=2.5.0",
+    "tqdm>=4.64.0",
+    "scipy>=1.9.0",
+    "matplotlib>=3.5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/pabhenriquez/Tf-ELM-RVFL"
+Repository = "https://github.com/pabhenriquez/Tf-ELM-RVFL"
+
+[tool.setuptools]
+packages = ["Layers", "Models", "Optimizers", "Resources"]

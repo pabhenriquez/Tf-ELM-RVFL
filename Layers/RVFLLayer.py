@@ -217,17 +217,14 @@ class RVFLLayer:
             # More samples than features
             DTD = tf.matmul(D, D, transpose_a=True)
             reg_matrix = self.C * tf.eye(d_cols, dtype=tf.float32)
-            self.beta = tf.matmul(
-                tf.matmul(tf.linalg.inv(reg_matrix + DTD), D, transpose_b=True),
-                y
-            )
+            DTy = tf.matmul(D, y, transpose_a=True)
+            self.beta = tf.linalg.solve(reg_matrix + DTD, DTy)
         else:
             # More features than samples
             DDT = tf.matmul(D, D, transpose_b=True)
             reg_matrix = self.C * tf.eye(n_sample_int, dtype=tf.float32)
             self.beta = tf.matmul(
-                tf.matmul(D, tf.linalg.inv(reg_matrix + DDT), transpose_a=True),
-                y
+                D, tf.linalg.solve(reg_matrix + DDT, y), transpose_a=True
             )
 
         if self.beta_optimizer is not None:
